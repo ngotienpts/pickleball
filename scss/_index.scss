@@ -1,0 +1,142 @@
+.heading-primary {}
+
+.swiper-pagination-bullet-active {
+  background: #A61B28;
+}
+
+.see-more-primary {
+  &__link {
+    border-bottom: 1px solid transparent;
+
+    .icon {
+      margin-top: -4px;
+    }
+
+    &:hover {
+      border-bottom-color: #a61b28;
+
+      .icon {
+        transform: translateX(5px);
+        transition: ease 0.2s;
+      }
+    }
+  }
+
+}
+
+.arrow-slide-primary {
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 50px;
+    height: 50px;
+    margin-top: 0;
+    background: transparent;
+    border-radius: 50%;
+    border: 1px solid #999;
+    color: #999;
+    transform: translateY(-50%);
+  }
+
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
+    background: #e9bc25;
+    border-color: #e9bc25;
+    color: #fff;
+
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 20px;
+  }
+
+  .swiper-button-next.swiper-button-disabled,
+  .swiper-button-prev.swiper-button-disabled {
+    /* opacity: 1; */
+    cursor: auto;
+    pointer-events: none;
+    background: transparent;
+    border-color: #999;
+  }
+
+  &--white {
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      border-color: #fff;
+      color: #fff;
+    }
+
+    .swiper-button-next.swiper-button-disabled,
+    .swiper-button-prev.swiper-button-disabled {
+      border-color: #fff;
+    }
+  }
+
+}
+
+
+
+.same-height {
+  .swiper-wrapper {
+    display: flex;
+  }
+
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+  }
+
+  .article {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .article-img {
+    flex-shrink: 0;
+  }
+
+  .article-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.hidden.active {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.pagi-red {
+  .swiper-pagination-bullet-active {
+    background: #A61B28;
+  }
+}
+
+
+.section-primary {}
+
+.section-secondary {}
+
+.section-tertiary {}
+
+.section-quaternary {}
+
+.section-quinary {}
+
+.section-senary {}
+
+.section-septenary {}
+
+.section-octonary {}
+
+.section-nonary {}
