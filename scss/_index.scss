@@ -39,10 +39,18 @@
         color: #fff;
         padding: 11px 86px;
         background-color: #0453D2;
+        border: 1px solid #0453D2;
         border-radius: 999px;
         display: flex;
         align-items: center;
         justify-content: center;
+        font-weight: 500;
+
+        &--border {
+          background-color: #fff;
+          border: 1px solid #0453D2;
+          color: #0453D2;
+        }
     }
 }
 

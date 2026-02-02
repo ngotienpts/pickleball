@@ -79,9 +79,27 @@
     }
 }
 
-/*======================================================================== news */
+
 .ads-right {
     img {
         width: 100%;
+    }
+}
+
+/*======================================================================== serach */
+.search-primary {
+    &__top {
+        &-form {
+            .form-group {
+                 border: 1px solid #bdbdbd;
+                 border-radius: 999px;
+                 padding: 11px 30px;
+            }
+
+            .search-btn {
+                padding: 2px;
+                margin-left: 4px;
+            }
+        }
     }
 }
