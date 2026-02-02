@@ -263,8 +263,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 var prev = item.querySelector(".swiper-button-prev");
                 var pagi = item.querySelector(".swiper-pagination");
                 new Swiper(slider, {
-                    slidesPerView: 1.2,
-                    spaceBetween: 10,
+                    slidesPerView: 1.6,
+                    spaceBetween: 12,
                     slidesPerGroup: 1,
                     navigation: {
                         nextEl: next || null,
@@ -296,18 +296,18 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
     }
-    // khởi tạo slider với 5 item
-    function initSliderFiveItems() {
-        const fiveSlides = document.querySelectorAll(".js__fiveSlidesContainer");
-        if (fiveSlides) {
-            fiveSlides.forEach((item) => {
-                var slider = item.querySelector(".js__fiveSlide");
+    // khởi tạo slider với 4.5 item
+    function initSliderHalfPastFourItems() {
+        const halfPastFourSlides = document.querySelectorAll(".js__halfPastFourSlidesContainer");
+        if (halfPastFourSlides) {
+            halfPastFourSlides.forEach((item) => {
+                var slider = item.querySelector(".js__halfPastFourSlide");
                 var next = item.querySelector(".swiper-button-next");
                 var prev = item.querySelector(".swiper-button-prev");
                 var pagi = item.querySelector(".swiper-pagination");
                 new Swiper(slider, {
-                    slidesPerView: 2,
-                    spaceBetween: 10,
+                    slidesPerView: 1.6,
+                    spaceBetween: 12,
                     slidesPerGroup: 1,
                     navigation: {
                         nextEl: next || null,
@@ -323,42 +323,36 @@ document.addEventListener("DOMContentLoaded", function () {
                     // },
                     breakpoints: {
                         768: {
-                            slidesPerView: 3,
+                            slidesPerView: 2.5,
+                            spaceBetween: 15,
                         },
                         1024: {
-                            slidesPerView: 4,
+                            slidesPerView: 3.5,
+                            spaceBetween: 20,
                         },
                         1200: {
-                            slidesPerView: 5,
-                        }
+                            slidesPerView: 4.5,
+                            spaceBetween: 24,
+                        },
                     },
                 });
             });
         }
     }
-
-    // khởi tạo slider four row
-    function initSliderFourRowItems() {
-        const fourRowSlides = document.querySelectorAll(".js__fourRowSlidesContainer");
-        if (fourRowSlides) {
-            fourRowSlides.forEach((item) => {
-                var slider = item.querySelector(".js__fourRowSlide");
+    // khởi tạo slider với 5 item
+    function initSliderFiveItems() {
+        const fiveSlides = document.querySelectorAll(".js__fiveSlidesContainer");
+        if (fiveSlides) {
+            fiveSlides.forEach((item) => {
+                var slider = item.querySelector(".js__fiveSlide");
                 var next = item.querySelector(".swiper-button-next");
                 var prev = item.querySelector(".swiper-button-prev");
                 var pagi = item.querySelector(".swiper-pagination");
                 new Swiper(slider, {
-                    spaceBetween: 10,
-                    slidesPerView: 4, 
+                    slidesPerView: 1.6,
+                    spaceBetween: 12,
                     slidesPerGroup: 1,
-                    grid: {
-                        rows: 4,      
-                        fill: 'row',
-                    },
-                    watchSlidesProgress: true,
-                    watchOverflow: true,
-                    freeMode: false, 
-                    observer: true,
-                    observeParents: true,
+                    loop:true,
                     navigation: {
                         nextEl: next || null,
                         prevEl: prev || null,
@@ -367,44 +361,29 @@ document.addEventListener("DOMContentLoaded", function () {
                         el: pagi || null,
                         clickable: true,
                     },
+                    // autoplay: {
+                    //     delay: 3000,
+                    //     disableOnInteraction: false,
+                    // },
                     breakpoints: {
-                        640: {
-                            slidesPerView: 4,
-                            grid: {
-                                rows: 4,
-                                fill: 'row',
-                            },
-                            spaceBetween: 12,
-                        },
                         768: {
-                            slidesPerView: 4,
-                            spaceBetween: 12,
-                            grid: {
-                                rows: 4,
-                                fill: 'row',
-                            },
+                            slidesPerView: 3,
+                            spaceBetween: 15,
                         },
                         1024: {
-                            slidesPerView: 5,
-                            spaceBetween: 20,
-                            grid: {
-                                rows: 4,
-                                fill: 'row',
-                            },
+                            slidesPerView: 4,
+                            spaceBetween: 15,
                         },
                         1200: {
                             slidesPerView: 5,
                             spaceBetween: 20,
-                            grid: {
-                                rows: 4,
-                                fill: 'row',
-                            },
-                        },
+                        }
                     },
                 });
             });
         }
     }
+
     
     // xử lý sự kiện show menu mobile
     function handleMenuMobile () {
@@ -589,8 +568,8 @@ document.addEventListener("DOMContentLoaded", function () {
         initSliderOneItems();
         initSliderThreeItems();
         initSliderFourItems();
+        initSliderHalfPastFourItems();
         initSliderFiveItems();
-        initSliderFourRowItems();
         
         // end slide
         handleUploadFile();
