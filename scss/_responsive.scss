@@ -151,6 +151,9 @@
     .pt-md-0 {
         padding-top: 0;
     }
+    .pl-md-0 {
+        padding-left: 0;
+    }
     .mt-md-0 {
         margin-top: 0;
     }
@@ -214,6 +217,11 @@
     }
    
     // --------------------------------------------------------------------index
+    .heading-primary {
+        &__text {
+            font-size: 18px;
+        }
+    }
     .arrow-slide-primary,
     .arrow-slide-secondary{
        .swiper-button-next, 
@@ -297,16 +305,7 @@
             width: 100%;
             max-width: 100%;
         }
-        &__left {
-            max-width: 100%;
-            width: 100%;
-            margin-bottom: 40px;
-        }
-
-        &__right {
-            max-width: 100%;
-            width: 100%;
-        }
+        
     }
 
     

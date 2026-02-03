@@ -504,6 +504,48 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
+     // Xử lý tăng giảm font size
+    function handleChangeFontSize() {
+        const changeSizeButtonContainers = document.querySelectorAll('.js__changeSizeButton');
+
+        if(changeSizeButtonContainers.length === 0) return
+
+        changeSizeButtonContainers.forEach((changeSizeButtonContainer) => {
+            const sizeDefault = changeSizeButtonContainer.querySelector('.js__defaultSize');
+            const sizePlus = changeSizeButtonContainer.querySelector('.js__plusSize');
+    
+            const sizeContent = document.querySelector(".js__changeSizeContent");
+            const paragraphs = sizeContent.querySelectorAll("p");
+            let increaseCount = 0;
+            const maxIncrease = 3;
+    
+            // Lưu kích thước mặc định ban đầu của từng thẻ <p>
+            const defaultFontSizes = Array.from(paragraphs).map((p) =>
+                parseInt(window.getComputedStyle(p).fontSize)
+            );
+    
+            sizePlus.onclick = function () {
+                if (increaseCount < maxIncrease) {
+                    increaseCount++;
+                    paragraphs.forEach((paragraph, index) => {
+                        const newFontSize = defaultFontSizes[index] + increaseCount + "px";
+                        paragraph.style.fontSize = newFontSize;
+                    });
+                }
+            };
+    
+            sizeDefault.onclick = function () {
+                if (increaseCount > 0) {
+                    increaseCount--;
+                    paragraphs.forEach((paragraph, index) => {
+                        const newFontSize = defaultFontSizes[index] + increaseCount + "px";
+                        paragraph.style.fontSize = newFontSize;
+                    });
+                }
+            };
+        });
+    }
+
 
     // Khởi tạo fancybox
     function initFancybox() {
@@ -564,6 +606,7 @@ document.addEventListener("DOMContentLoaded", function () {
         handleMenuMobile();
         handleShowPopupLogin();
         handleShowDropdown();
+        handleChangeFontSize();
         // slide
         initSliderOneItems();
         initSliderThreeItems();
