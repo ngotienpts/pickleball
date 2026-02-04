@@ -416,6 +416,9 @@ p {
 .text-white {
     color: #fff;
 }
+.text-white-60 {
+    color: rgba($color: #fff, $alpha: 0.6);
+}
 .text-black-60 {
     color: rgba(0, 0, 0, 0.6);
 }
@@ -465,6 +468,9 @@ p {
 .bg-transparent {
     background-color: transparent;
 }
+.bg-gray-15 {
+    background-color: #151515;
+}
 .bg-gray-f6 {
     background-color: #F6F6F6;
 }
@@ -476,6 +482,9 @@ p {
 }
 .bg-blue-e0 {
     background-color: #E0EEFF;
+}
+.bg-blue-001 {
+    background-color: #001F51;
 }
 .bg-red-gradient {
     background-image: linear-gradient(180deg, #D50F2C, #FF3E57);
