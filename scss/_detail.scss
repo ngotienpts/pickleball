@@ -359,6 +359,19 @@
         overflow: hidden;
         margin: 4px;
     }
+
+    &--56 {
+        .tag-link {
+            background-color: #565656;
+            color: #fff;
+        }
+    }
+    &--006 {
+        .tag-link {
+            background-color: #0062FF;
+            color: #fff;
+        }
+    }
 }
 
 // print

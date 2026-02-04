@@ -1857,6 +1857,14 @@ p + p {
   border-bottom: 1px solid #DBDBDB;
 }
 
+.border-t-56 {
+  border-top: 1px solid #565656;
+}
+
+.border-b-56 {
+  border-bottom: 1px solid #565656;
+}
+
 .border-b-dotted-bd {
   border-bottom: 1px dotted #DBDBDB;
 }
@@ -2912,6 +2920,14 @@ p + p {
   border-radius: 999px;
   overflow: hidden;
   margin: 4px;
+}
+.detail-tags--56 .tag-link {
+  background-color: #565656;
+  color: #fff;
+}
+.detail-tags--006 .tag-link {
+  background-color: #0062FF;
+  color: #fff;
 }
 
 .print-box .detail-content {
