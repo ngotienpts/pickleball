@@ -11,6 +11,27 @@
 .detail-primary {
     
 }
+.detail-primary-ema {
+    .detail-title,
+    .detail-action,
+    .detail-sapo,
+    #explus-editor > h1,
+    #explus-editor > h2,
+    #explus-editor > h3,
+    #explus-editor > h4,
+    #explus-editor > h5,
+    #explus-editor > h6,
+    #explus-editor > ul,
+    #explus-editor > table,
+    #explus-editor > blockquote,
+    #explus-editor > p,
+    .detail-box-second {
+        max-width: 840px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 // share list
 .share-detail {
     &__container {
@@ -118,6 +139,20 @@
     }
 }
 
+.detail-author-secondary {
+    .article {
+        &-img {
+            &__link {
+                img {
+                    width: 39px;
+                    height: 39px;
+                    border-radius: 999px;
+                }
+            }
+        }
+    }
+}
+
 .detail-content {
     & figure {
         margin-bottom: 1.25rem;
@@ -127,6 +162,40 @@
             height: auto !important;
             margin: auto;
             border-radius: 15px;
+        }
+
+        &.col-2 {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-gap: 10px;
+
+            & figcaption {
+                display: block;
+                width: 100%;
+                grid-column: 1 / 3;
+            }
+        }
+        &.col-3 {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap: 10px;
+
+            & figcaption {
+                display: block;
+                width: 100%;
+                grid-column: 1 / 4;
+            }
+        }
+        &.col-4 {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-gap: 10px;
+
+            & figcaption {
+                display: block;
+                width: 100%;
+                grid-column: 1 / 5;
+            }
         }
     }
     & figure figcaption {

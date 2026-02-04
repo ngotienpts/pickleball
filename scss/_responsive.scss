@@ -151,6 +151,9 @@
     .pt-md-0 {
         padding-top: 0;
     }
+    .pb-md-0 {
+        padding-bottom: 0;
+    }
     .pl-md-0 {
         padding-left: 0;
     }
@@ -159,6 +162,9 @@
     }
     .mb-md-10 {
         margin-bottom: 10px;
+    }
+    .mt-md-12 {
+        margin-top: 12px;
     }
     .mt-md-20 {
         margin-top: 20px;
@@ -295,7 +301,25 @@
         font-size: 30px;
     }
 
+    .detail-content {
+        & figure {
+            
+            &.col-2,
+            &.col-3,
+            &.col-4 {
+                display: grid;
+                grid-template-columns: repeat(1,1fr);
+                grid-gap: 10px;
 
+                & figcaption {
+                    display: block;
+                    width: 100%;
+                    grid-column: 1 / 2;
+                }
+            }
+            
+        }
+    }
     .detail-primary {
         &__container {
             padding-top: 10px;
@@ -422,7 +446,7 @@
 
     .detail-action {
         margin-bottom: 20px;
-        padding-bottom: 20px;
+        padding-bottom: 12px;
     }
 
 
@@ -442,7 +466,7 @@
                 font-size: 14px;
             }
             img {
-                border-radius: 5px;
+                border-radius: 12px;
             }
         }
         
@@ -467,6 +491,15 @@
         }
         & h6 {
             font-size: 16px;
+        }
+
+        & figure h2,
+        figure h3,
+        figure h4,
+        figure h5,
+        figure h6,
+        figure p {
+            font-size: 12px !important;
         }
     
         & blockquote {
