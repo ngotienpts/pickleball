@@ -266,6 +266,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     slidesPerView: 1.6,
                     spaceBetween: 12,
                     slidesPerGroup: 1,
+                    loop:true,
                     navigation: {
                         nextEl: next || null,
                         prevEl: prev || null,
@@ -281,7 +282,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     breakpoints: {
                         768: {
                             slidesPerView: 2,
-                            spaceBetween: 20,
+                            spaceBetween: 15,
                         },
                         1024: {
                             slidesPerView: 3,
@@ -289,7 +290,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         },
                         1200: {
                             slidesPerView: 4,
-                            spaceBetween: 30,
+                            spaceBetween: 24,
                         },
                     },
                 });

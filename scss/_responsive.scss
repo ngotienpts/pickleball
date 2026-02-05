@@ -144,9 +144,14 @@
     .col-md-2 {
         grid-template-columns: repeat(2, 1fr);
     }
+    /*-------------------------------------------------------------------------*/
     .gap-md-10 {
         grid-gap: 0.625rem;
         gap: 0.625rem;
+    }
+    .gap-md-12 {
+        grid-gap: 12px;
+        gap: 12px;
     }
     .pt-md-0 {
         padding-top: 0;
@@ -157,18 +162,42 @@
     .pl-md-0 {
         padding-left: 0;
     }
+    .p-md-0 {
+        padding: 0;
+    }
     .mt-md-0 {
         margin-top: 0;
     }
+    /*-------------------------------------------------------------------------*/
     .mb-md-10 {
         margin-bottom: 10px;
     }
+    /*-------------------------------------------------------------------------*/
     .mt-md-12 {
         margin-top: 12px;
     }
+    .ml-md-12 {
+        margin-left: 12px;
+    }
+    /*-------------------------------------------------------------------------*/
+    .p-md-16 {
+        padding: 16px;
+    }
+    .pt-md-16 {
+        padding-top: 16px;
+    }
+    .pb-md-16 {
+        padding-bottom: 16px;
+    }
+    /*-------------------------------------------------------------------------*/
     .mt-md-20 {
         margin-top: 20px;
     }
+    .py-md-20 {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    /*-------------------------------------------------------------------------*/
     .py-md-30 {
         padding-top: 30px;
         padding-bottom: 30px;
@@ -185,6 +214,7 @@
     .mb-md-30 {
         margin-bottom: 30px;
     }
+    /*-------------------------------------------------------------------------*/
     .py-md-40 {
         padding-top: 40px;
         padding-bottom: 40px;
@@ -198,15 +228,46 @@
     .mt-md-40 {
         margin-top: 40px;
     }
+    /*-------------------------------------------------------------------------*/
+    .border-md-0 {
+        border: none;
+    }
+    /*-------------------------------------------------------------------------*/
     .w-md-29 {
         width: 29%;
+    }
+    .w-md-30 {
+        width: 30%;
+    }
+    .w-md-33 {
+        width: 33%;
+    }
+    .w-md-40px {
+        width: 40px;
+    }
+    .w-md-56px {
+        width: 56px;
     }
     .w-md-60px {
         width: 60px;
     }
+    /*-------------------------------------------------------------------------*/
     .fs-md-12 {
         font-size: 12px;
     }
+    .fs-md-14 {
+        font-size: 14px;
+    }
+    .fs-md-18 {
+        font-size: 18px;
+    }
+    /*-------------------------------------------------------------------------*/
+    .nowrap-md {
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        overflow: auto;
+    }
+    /*-------------------------------------------------------------------------*/
     .justify-md-start {
         justify-content: flex-start;
     }
@@ -267,7 +328,8 @@
 
 
     // --------------------------------------------------------------------cate
-
+    // --------------------------------------------------- search
+    
     .search-primary {
         &__top {
             &-title {
@@ -280,13 +342,42 @@
                     padding: 11px 16px;
                     height: 46px;
                 }
-
+                
                 .search-input {
                     font-size: 16px;
                 }
             }
         }
     }
+    // --------------------------------------------------- danh sach tac gia
+    .author-list-primary {
+        &__left {
+            .article {
+                margin-bottom: 16px;
+            }
+            
+        }
+    }
+    // --------------------------------------------------- tac gia
+    .article-list-primary {
+        .article {
+            .article-img {
+                width: 30%;
+            }
+            .article-content {
+                margin-left: 12px;
+            }
+            .article-des {
+                display: none;
+            }
+        }
+    }
+    // --------------------------------------------------- giai dau
+    .tournament-tertiary {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
 
     // --------------------------------------------------------------------detail
 
@@ -423,6 +514,16 @@
     .breadcrumb-container {
         padding-top: 0;
         padding-bottom: 0;
+    }
+    // --------------------------------------------------- giai dau
+    .tournament-tertiary {
+        padding-left: 0;
+        padding-right: 0;
+
+        &__inner {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
     }
 
     // --------------------------------------------------------------------detail

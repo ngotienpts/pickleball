@@ -133,3 +133,42 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+/*======================================================================== danh sach tac gia */
+.flag-primary {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.tab-list {
+    .tab-item {
+        &.active {
+            color: #EC0033;
+        }
+    }
+}
+.author-list-primary {
+    &__left {
+        .articles {
+            gap: 8px 20px;
+            grid-gap: 8px 20px;
+        }
+        .article-content {
+            &__bot {
+                .article {
+                }
+                .article-txt {
+                    margin-right: 16px;
+                    padding-right: 16px;
+                    border-right: 1px solid #bdbdbd;
+
+                    &:last-child {
+                        margin-right: 0;
+                        padding-right: 0;
+                        border-right: none;
+                    }
+                }
+            }
+        }
+    }
+}
