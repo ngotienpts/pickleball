@@ -254,6 +254,95 @@
 }
 .block-right-two {}
 .block-right-three {}
+
+.block-one {
+    .article-list {
+        .article {
+            border-bottom: 1px dashed #c1c1c1;
+            &:first-child {
+                background-color: #FFF5F5;
+                .article-content__bot {
+                    .article-point {
+                        color: #0453D2;
+                        font-weight: 500;
+                    }
+                }
+                .article-content__right {
+                    .content-right__text {
+                        color: #EC0033;
+                        font-weight: 500;
+                    }
+
+                }
+            }
+            &:nth-child(2) {
+                .article-content__bot {
+                    .article-point {
+                        color: #0453D2;
+                        font-weight: 500;
+                    }
+                }
+                .article-content__right {
+                    .content-right__text {
+                        color: #0453D2;
+                        font-weight: 500;
+                    }
+
+                }
+            }
+            &:nth-child(3) {
+                .article-content__right {
+                    .content-right__text {
+                        color: #151515;
+                        font-weight: 500;
+                    }
+
+                }
+            }
+            &:hover {
+                background-color: #FFF5F5;
+            }
+        }
+    }
+
+    .tab-select {
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid #d9d9d9;
+        background-color: #fff;
+    }
+}
+.block-two {}
+
+.block-three {
+    &-item {
+        &__list {
+            .article {
+                border-bottom: 1px dashed #dbdbdb;
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+
+.block-four {
+
+}
+
+.block-five {
+    &__list {
+        .article {
+            border: 1px solid #bdbdbd;
+            padding: 12px;
+            margin: 0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+    }
+}
+
 .topic-hot-primary {
     &__icon {
         width: 32px;
@@ -293,3 +382,7 @@
 .section-decenary {
     
 }
+.section-eleventh {}
+.section-twelfth {}
+.section-thirteenth {}
+.section-fourteenth {}

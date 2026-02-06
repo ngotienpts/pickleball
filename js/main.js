@@ -21,8 +21,65 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     this.classList.add('active')
                     pane.classList.add('active')
+
+                    this.scrollIntoView({
+                    behavior: 'smooth',
+                    inline: 'center',   
+                    block: 'nearest'    // Tránh nhảy trang theo chiều dọc
+                });
                 }
             })
+        })
+    }
+
+    // xử lý sự kiện chuyển tab secondary
+    function handleChangeTabScondary() {
+        const changTabs = document.querySelectorAll('.js__changeTabSecondary');
+
+        if (changTabs.length === 0) return;
+
+        changTabs.forEach((changTab) => {
+            const select = changTab.querySelector(".js__tabSelect");
+            const panes = changTab.querySelectorAll(".js__tabPane");
+
+            if (!select) return;
+
+            select.onchange = function() {
+                // Lấy index từ value của option được chọn
+                const index = this.value; 
+                const pane = panes[index];
+
+                // 1. Xóa class active cũ của Pane
+                const activePane = changTab.querySelector('.js__tabPane.active');
+                if (activePane) activePane.classList.remove('active');
+
+                // 2. Thêm class active cho Pane tương ứng
+                if (pane) {
+                    pane.classList.add('active');
+                }
+                
+            };
+        });
+    }
+
+    // xử lý cuộn đến giữa item được active
+    function handleScrollIntoViewPrimary() {
+        const scrollIntoViewPrimaryContainers = document.querySelectorAll('.js__scrollIntoViewPrimaryContainer')
+
+        if (scrollIntoViewPrimaryContainers.length === 0) return;
+
+        scrollIntoViewPrimaryContainers.forEach((scrollIntoViewPrimaryContainers)=>{
+            const activeItem = scrollIntoViewPrimaryContainers.querySelector(".js__scrollIntoViewPrimaryItem.active");
+
+            if (activeItem) {
+                setTimeout(() => {
+                    activeItem.scrollIntoView({
+                        behavior: 'smooth',
+                        inline: 'center',  
+                        block: 'nearest' 
+                    });
+                }, 100);
+            }
         })
     }
 
@@ -608,6 +665,7 @@ document.addEventListener("DOMContentLoaded", function () {
         handleShowPopupLogin();
         handleShowDropdown();
         handleChangeFontSize();
+        handleScrollIntoViewPrimary();
         // slide
         initSliderOneItems();
         initSliderThreeItems();
@@ -622,6 +680,7 @@ document.addEventListener("DOMContentLoaded", function () {
         handleShowPopup();
         handleCollapse();
         handleChangeTab();
+        handleChangeTabScondary();
         handleActiveElement();
         handleVideo_16x9();
         window.addEventListener('scroll',handleWindowScroll);

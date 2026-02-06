@@ -276,8 +276,20 @@ p + p {
   width: 100%;
 }
 
+.w-10 {
+  width: 10%;
+}
+
 .w-13 {
   width: 13%;
+}
+
+.w-20 {
+  width: 20%;
+}
+
+.w-22 {
+  width: 22%;
 }
 
 .w-30 {
@@ -340,6 +352,14 @@ p + p {
   width: 70%;
 }
 
+.w-20px {
+  width: 20px;
+}
+
+.w-30px {
+  width: 30px;
+}
+
 .w-45px {
   width: 45px;
 }
@@ -348,8 +368,16 @@ p + p {
   width: 50px;
 }
 
+.w-80px {
+  width: 80px;
+}
+
 .w-73px {
   width: 73px;
+}
+
+.w-100px {
+  width: 100px;
 }
 
 .w-120px {
@@ -769,6 +797,12 @@ p + p {
 
 .fw-bold {
   font-weight: bold;
+}
+
+/*=================================================================*/
+.mx-2 {
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 /*=================================================================*/
@@ -1848,10 +1882,12 @@ p + p {
   height: 100%;
 }
 
-.last-article .article:first-child {
+.last-article .article:first-child,
+.last-article .article-left__item:first-child {
   padding-top: 0;
 }
-.last-article .article:last-child {
+.last-article .article:last-child,
+.last-article .article-left__item:last-child {
   margin-bottom: 0;
   padding-bottom: 0;
   border-bottom: none;
@@ -2543,6 +2579,57 @@ p + p {
   margin-top: 4px;
 }
 
+.block-one .article-list .article {
+  border-bottom: 1px dashed #c1c1c1;
+}
+.block-one .article-list .article:first-child {
+  background-color: #FFF5F5;
+}
+.block-one .article-list .article:first-child .article-content__bot .article-point {
+  color: #0453D2;
+  font-weight: 500;
+}
+.block-one .article-list .article:first-child .article-content__right .content-right__text {
+  color: #EC0033;
+  font-weight: 500;
+}
+.block-one .article-list .article:nth-child(2) .article-content__bot .article-point {
+  color: #0453D2;
+  font-weight: 500;
+}
+.block-one .article-list .article:nth-child(2) .article-content__right .content-right__text {
+  color: #0453D2;
+  font-weight: 500;
+}
+.block-one .article-list .article:nth-child(3) .article-content__right .content-right__text {
+  color: #151515;
+  font-weight: 500;
+}
+.block-one .article-list .article:hover {
+  background-color: #FFF5F5;
+}
+.block-one .tab-select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #d9d9d9;
+  background-color: #fff;
+}
+
+.block-three-item__list .article {
+  border-bottom: 1px dashed #dbdbdb;
+}
+.block-three-item__list .article:last-child {
+  border-bottom: none;
+}
+
+.block-five__list .article {
+  border: 1px solid #bdbdbd;
+  padding: 12px;
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
 .topic-hot-primary__icon {
   width: 32px;
   height: 32px;
@@ -2682,6 +2769,78 @@ p + p {
   margin-right: 0;
   padding-right: 0;
   border-right: none;
+}
+
+/*======================================================================== giai dau */
+.item-cate-primary.active {
+  color: #EC0033;
+}
+
+.table-primary__row {
+  border-bottom: 1px dashed #ededed;
+}
+.table-primary__row:first-child {
+  background-color: #FFF5F5;
+  border-bottom-color: transparent;
+}
+.table-primary__row:first-child .table-primary__column--one {
+  color: #EC0033;
+}
+.table-primary__row:first-child .table-primary__column--four {
+  color: #0453D2;
+  font-weight: 500;
+}
+.table-primary__row:nth-child(2) .table-primary__column--one {
+  color: #0453D2;
+}
+.table-primary__row:nth-child(2) .table-primary__column--four {
+  color: #0453D2;
+  font-weight: 500;
+}
+.table-primary__row:nth-child(3) .table-primary__column--four {
+  font-weight: 500;
+}
+.table-primary__row:hover {
+  background-color: #FFF5F5;
+  border-bottom-color: transparent;
+}
+
+.table-secondary__row {
+  border-bottom: 1px dashed #ededed;
+}
+.table-secondary__row:first-child {
+  background-color: #FFF5F5;
+  border-bottom-color: transparent;
+}
+.table-secondary__row:first-child .table-secondary__column--one {
+  color: #EC0033;
+}
+.table-secondary__row:first-child .table-secondary__column--five {
+  color: #0453D2;
+  font-weight: 500;
+}
+.table-secondary__row:nth-child(2) .table-secondary__column--one {
+  color: #0453D2;
+}
+.table-secondary__row:nth-child(2) .table-secondary__column--five {
+  color: #0453D2;
+  font-weight: 500;
+}
+.table-secondary__row:nth-child(3) .table-secondary__column--four {
+  font-weight: 500;
+}
+.table-secondary__row:hover {
+  background-color: #FFF5F5;
+  border-bottom-color: transparent;
+}
+
+.detail-match-primary__bg {
+  position: absolute;
+  inset: 0;
+}
+.detail-match-primary__bg img {
+  width: 100%;
+  height: 100%;
 }
 
 .pane-item {
@@ -3464,6 +3623,13 @@ p + p {
   .tournament-tertiary {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .tab-list {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow: auto;
+    justify-content: flex-start;
   }
 
   .detail-tags .tags-list {

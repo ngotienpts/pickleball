@@ -172,3 +172,100 @@
         }
     }
 }
+/*======================================================================== giai dau */
+.item-cate-primary {
+    &.active {
+        color: #EC0033;
+    }
+}
+.table-primary {
+    &__row {
+        border-bottom: 1px dashed #ededed;
+        &:first-child {
+            background-color: #FFF5F5;
+            border-bottom-color: transparent;
+            .table-primary__column {
+                &--one {
+                    color: #EC0033;
+                }
+                &--four {
+                    color: #0453D2;
+                    font-weight: 500;
+                }
+            }
+        }
+        &:nth-child(2) {
+            .table-primary__column {
+                &--one {
+                    color: #0453D2;
+                }
+                &--four {
+                    color: #0453D2;
+                    font-weight: 500;
+                }
+            }
+        }
+        &:nth-child(3) {
+            .table-primary__column {
+                &--four {
+                    font-weight: 500;
+                }
+            }
+        }
+        &:hover {
+            background-color: #FFF5F5;
+            border-bottom-color: transparent;
+        }
+    }
+}
+.table-secondary {
+    &__row {
+        border-bottom: 1px dashed #ededed;
+        &:first-child {
+            background-color: #FFF5F5;
+            border-bottom-color: transparent;
+            .table-secondary__column {
+                &--one {
+                    color: #EC0033;
+                }
+                &--five {
+                    color: #0453D2;
+                    font-weight: 500;
+                }
+            }
+        }
+        &:nth-child(2) {
+            .table-secondary__column {
+                &--one {
+                    color: #0453D2;
+                }
+                &--five {
+                    color: #0453D2;
+                    font-weight: 500;
+                }
+            }
+        }
+        &:nth-child(3) {
+            .table-secondary__column {
+                &--four {
+                    font-weight: 500;
+                }
+            }
+        }
+        &:hover {
+            background-color: #FFF5F5;
+            border-bottom-color: transparent;
+        }
+    }
+}
+
+.detail-match-primary {
+    &__bg {
+        position: absolute;
+        inset: 0;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

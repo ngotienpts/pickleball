@@ -377,6 +377,12 @@
         padding-left: 0;
         padding-right: 0;
     }
+    .tab-list {
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        overflow: auto;
+        justify-content: flex-start;
+    }
     
 
     // --------------------------------------------------------------------detail
