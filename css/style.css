@@ -1937,6 +1937,10 @@ p + p {
   border-bottom: 1px dotted #DBDBDB;
 }
 
+.border-w {
+  border: 1px dotted #fff;
+}
+
 .header {
   z-index: 9999;
 }
@@ -3534,6 +3538,10 @@ p + p {
 
   .fs-md-18 {
     font-size: 18px;
+  }
+
+  .fs-md-24 {
+    font-size: 24px;
   }
 
   /*-------------------------------------------------------------------------*/
