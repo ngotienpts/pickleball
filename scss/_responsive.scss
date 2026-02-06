@@ -145,6 +145,10 @@
         grid-template-columns: repeat(2, 1fr);
     }
     /*-------------------------------------------------------------------------*/
+    .text-w-md-70 {
+        color: rgba($color: #fff, $alpha: 0.7);
+    }
+    /*-------------------------------------------------------------------------*/
     .gap-md-10 {
         grid-gap: 0.625rem;
         gap: 0.625rem;
@@ -187,6 +191,14 @@
         padding-top: 16px;
     }
     .pb-md-16 {
+        padding-bottom: 16px;
+    }
+    .px-md-16 {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .py-md-16 {
+        padding-top: 16px;
         padding-bottom: 16px;
     }
     /*-------------------------------------------------------------------------*/
@@ -233,6 +245,12 @@
         border: none;
     }
     /*-------------------------------------------------------------------------*/
+    .w-md-15 {
+        width: 15%;
+    }
+    .w-md-20 {
+        width: 20%;
+    }
     .w-md-29 {
         width: 29%;
     }
@@ -258,6 +276,9 @@
     .fs-md-14 {
         font-size: 14px;
     }
+    .fs-md-16 {
+        font-size: 16px;
+    }
     .fs-md-18 {
         font-size: 18px;
     }
@@ -269,6 +290,9 @@
         flex-wrap: nowrap;
         white-space: nowrap;
         overflow: auto;
+    }
+    .flex-md-column {
+        flex-direction: column;
     }
     /*-------------------------------------------------------------------------*/
     .justify-md-start {
@@ -385,6 +409,35 @@
         white-space: nowrap;
         overflow: auto;
         justify-content: flex-start;
+    }
+    // --------------------------------------------------- chi tiet tran dau
+    .table-tertinary {
+        &__row {
+            padding-left: 0;
+            padding-right: 0;
+            &:first-child {
+                .table-tertinary__column {
+                    &--one {
+                        font-size: 24px;
+                    }
+                    &--three {
+                        font-size: 24px;
+                    }
+                }
+            }
+
+        }
+    }
+    .detail-match-primary {
+        &__left {
+            .article {
+                margin-bottom: 16px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
     }
     
 

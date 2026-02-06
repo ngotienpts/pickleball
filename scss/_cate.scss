@@ -258,6 +258,26 @@
         }
     }
 }
+.table-tertinary {
+    &__row {
+        border-bottom: 1px dashed #dbdbdb;
+        &:first-child {
+           .table-tertinary__column {
+            &--one {
+                font-size: 36px;
+            }
+            &--three {
+                font-size: 36px;
+            }
+           }
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+        
+    }
+}
 
 .detail-match-primary {
     &__bg {
