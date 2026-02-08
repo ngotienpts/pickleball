@@ -173,6 +173,53 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }
 
+     // xử lý sự kiện add active 
+    function handleAddActive() {
+        const addActiveContainers = document.querySelectorAll('.js__addActiveContainers');
+        if (addActiveContainers.length === 0) return;
+
+        addActiveContainers.forEach((container) => {
+            const triggerBtn = container.querySelector('.js__addActiveItem');
+            const overlay = container.querySelector(".js__overlay");
+            const closeBtn = container.querySelector('.js__closeActiveItem');
+
+            // Hàm cập nhật trạng thái cuộn của Body
+            const updateBodyScroll = () => {
+                if (container.classList.contains('active')) {
+                    document.body.style.overflow = "hidden";
+                } else {
+                    document.body.style.overflow = "auto";
+                }
+            };
+
+            // Hàm đóng container
+            const closeContainer = () => {
+                container.classList.remove('active');
+                if (overlay) overlay.classList.remove('active');
+                updateBodyScroll();
+            };
+
+            // 1. Sự kiện mở/toggle
+            if (triggerBtn) {
+                triggerBtn.onclick = function() {
+                    container.classList.toggle('active');
+                    if (overlay) overlay.classList.add('active');
+                    updateBodyScroll();
+                };
+            }
+
+            // 2. Sự kiện click vào Overlay để đóng
+            if (overlay) {
+                overlay.onclick = closeContainer;
+            }
+
+            // 3. Sự kiện click vào nút Đóng
+            if (closeBtn) {
+                closeBtn.onclick = closeContainer;
+            }
+        });
+    }
+
     // xử lý sự kiện để show popupLogin
     function handleShowPopupLogin() {
         const loginContainers = document.querySelectorAll('.js__loginContainer')
@@ -210,6 +257,7 @@ document.addEventListener("DOMContentLoaded", function () {
         
     }
 
+   
     // xử lý sự kiện để show dropdown
      function handleShowDropdown() {
         
@@ -240,6 +288,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       
     }
+
+
 
     // Khởi tạo slider với một item
     function initSliderOneItems() {
@@ -682,6 +732,7 @@ document.addEventListener("DOMContentLoaded", function () {
         handleChangeTab();
         handleChangeTabScondary();
         handleActiveElement();
+        handleAddActive();
         handleVideo_16x9();
         window.addEventListener('scroll',handleWindowScroll);
         window.addEventListener('resize',handleWindowScroll);
