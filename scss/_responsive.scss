@@ -563,6 +563,26 @@
             padding-top: 16px;
         }
     }
+
+    .statistical-primary {
+        &__content {
+            .article {
+                padding: 2px 16px;
+                margin-bottom: 30px;
+
+                &:last-child {
+                    border-right: none;
+                }
+                &:nth-child(even) {
+                    border-right: none;
+                    padding-right: 0;
+                }
+                &:nth-child(odd) {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
     // --------------------------------------------------------------------detail
 
     .detail-tags {

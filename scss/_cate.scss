@@ -477,3 +477,23 @@
 .athlete-overview-tertinary {
     
 }
+
+.statistical-primary {
+    &__content {
+        .article-trophy {
+            img {
+                height: 37px;
+                width: auto;
+                object-fit: contain;
+            }
+        }
+        .article {
+            padding: 4px 24px;
+            border-right: 1px dashed #dbdbdb;
+
+            &:last-child {
+                border-right: none;
+            }
+        }
+    }
+}
