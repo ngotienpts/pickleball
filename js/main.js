@@ -404,6 +404,108 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
     }
+    // khởi tạo slider với 4 item 2 row
+    function initSliderFourItemsTwoRow() {
+        const fourSlides = document.querySelectorAll(".js__fourSlidesTwoRowContainer");
+        if (fourSlides) {
+            fourSlides.forEach((item) => {
+                var slider = item.querySelector(".js__fourSlideTwoRow");
+                var next = item.querySelector(".swiper-button-next");
+                var prev = item.querySelector(".swiper-button-prev");
+                var pagi = item.querySelector(".swiper-pagination");
+                new Swiper(slider, {
+                    slidesPerView: 2,
+                    spaceBetween: 12,
+                    grid: {
+                        rows: 2,
+                        fill: 'row'
+                    },
+                    slidesPerGroup: 1,
+                    navigation: {
+                        nextEl: next || null,
+                        prevEl: prev || null,
+                    },
+                    pagination: {
+                        el: pagi || null,
+                        clickable: true,
+                    },
+                    // autoplay: {
+                    //     delay: 3000,
+                    //     disableOnInteraction: false,
+                    // },
+                    breakpoints: {
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 15,
+                            grid: {
+                                rows: 2,
+                                fill: 'row'
+                            },
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 20,
+                            grid: {
+                                rows: 2,
+                                fill: 'row'
+                            },
+                        },
+                        1200: {
+                            slidesPerView: 4,
+                            spaceBetween: 24,
+                            grid: {
+                                rows: 2,
+                                fill: 'row'
+                            },
+                        },
+                    },
+                });
+            });
+        }
+    }
+    // khởi tạo slider với 4 item secondary
+    function initSliderFourSecondaryItems() {
+        const fourSlides = document.querySelectorAll(".js__fourSlidesSecondaryContainer");
+        if (fourSlides) {
+            fourSlides.forEach((item) => {
+                var slider = item.querySelector(".js__fourSlide");
+                var next = item.querySelector(".swiper-button-next");
+                var prev = item.querySelector(".swiper-button-prev");
+                var pagi = item.querySelector(".swiper-pagination");
+                new Swiper(slider, {
+                    slidesPerView: 2.6,
+                    spaceBetween: 12,
+                    slidesPerGroup: 1,
+                    navigation: {
+                        nextEl: next || null,
+                        prevEl: prev || null,
+                    },
+                    pagination: {
+                        el: pagi || null,
+                        clickable: true,
+                    },
+                    // autoplay: {
+                    //     delay: 3000,
+                    //     disableOnInteraction: false,
+                    // },
+                    breakpoints: {
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 15,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 20,
+                        },
+                        1200: {
+                            slidesPerView: 4,
+                            spaceBetween: 24,
+                        },
+                    },
+                });
+            });
+        }
+    }
     // khởi tạo slider với 4.5 item
     function initSliderHalfPastFourItems() {
         const halfPastFourSlides = document.querySelectorAll(".js__halfPastFourSlidesContainer");
@@ -720,6 +822,8 @@ document.addEventListener("DOMContentLoaded", function () {
         initSliderOneItems();
         initSliderThreeItems();
         initSliderFourItems();
+        initSliderFourItemsTwoRow();
+        initSliderFourSecondaryItems();
         initSliderHalfPastFourItems();
         initSliderFiveItems();
         
