@@ -181,6 +181,13 @@
         margin-left: 0;
     }
     /*-------------------------------------------------------------------------*/
+    .p-md-6 {
+        padding: 6px;
+    }
+    /*-------------------------------------------------------------------------*/
+    .p-md-8 {
+        padding: 8px;
+    }
     .mt-md-8 {
         margin-top: 10px;
     }
@@ -212,6 +219,9 @@
     .py-md-16 {
         padding-top: 16px;
         padding-bottom: 16px;
+    }
+    .mt-md-16 {
+        margin-top: 16px;
     }
     /*-------------------------------------------------------------------------*/
     .mt-md-20 {
@@ -284,6 +294,9 @@
     }
     .w-md-60px {
         width: 60px;
+    }
+    .w-md-120px {
+        width: 120px;
     }
     .w-md-156px {
         width: 156px;
@@ -561,6 +574,19 @@
         &__right {
             padding-left: 0;
             padding-top: 16px;
+        }
+    }
+
+    .block-elven {
+        &__item {
+            .article {
+                .article-item {
+                    margin-right: 0;
+                    margin-bottom: 8px;
+                }
+                
+
+            }
         }
     }
 
